@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Hello World 100 Times</h1>
+    <br>
+    How many times?: <input id="count" onchange="helloWorld(this.value)" type="number" value="0";
+    <br>
+
+      <select onchange="fontChanger(this.value)">
+        <option value="Arial">Arial</option>
+        <option value="Comic">Comic Sans</option>
+        <option value="Curlz MT">Curlz MT</option>7
+      </select>
+    <p id="write"></p>
+    <p id="test">Before it is altered</p>
+    
+    <script>
+      function helloWorld(num){
+        document.getElementById("write").innerHTML = "";
+        for (var i = 0; i < num; i++ ){
+          document.getElementById("write").innerHTML += "Hello World <br>";
+        }
+      }
+      
+      function fontChanger(x){
+        document.getElementById("test").innerHTML = x;
+        document.getElementById("write").style.fontFamily = x;
+      }
+  </script>
+  </body>
+</html>
