@@ -1,0 +1,41 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<style>
+			canvas{
+				border-style: solid;
+				background-color: white;
+				margin-left: 25%;
+			}
+			h1{
+				text-align: center;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<h1>French Flag</h1>
+		<hr>
+		<canvas id="myCanvas" height="500px" width="500px"></canvas>
+		
+		<script>
+			var c = document.getElementById("myCanvas"); //this is the canvas as a variable
+			var rectangleOne = c.getContext("2d"); //this is stating it will be in 2D
+			rectangleOne.fillStyle="#0033cc";
+			rectangleOne.fillRect(0, 0, c.width/3, c.height); //this is the location of the rectangle
+			
+			var c = document.getElementById("myCanvas"); //this is the canvas as a variable
+			var rectangleTwo = c.getContext("2d"); //this is stating it will be in 2D
+			rectangleTwo.fillStyle="#ffffff";
+			rectangleTwo.fillRect(c.width/3, 0, c.width/3, c.height); //this is the location of the rectangle
+			
+			var c = document.getElementById("myCanvas"); //this is the canvas as a variable
+			var rectangleThree = c.getContext("2d"); //this is stating it will be in 2D
+			rectangleThree.fillStyle="#ff0000";
+			rectangleThree.fillRect(2 * c.width/3, 0, c.width/3, c.height); //this is the location of the rectangle
+			
+			// c.width/3
+		</script>
+	</body>
+	
+	
