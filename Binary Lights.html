@@ -1,0 +1,59 @@
+<!DOCTYPE>
+<html>
+	 <head>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<style>
+	img{
+		width: 204px;
+		height: 300px;
+	}
+	body{
+		background-image: url("http://www.the-beach-house.com/public/images/home/splash-2.jpg") 
+	}	
+	#numbers{
+		font-size: 400%;
+		font-family: Arial;
+		max-width: auto;
+	}
+	</style>
+	<body>
+
+	<div id="congrats">
+		<!-- Content will be added here if the code is correct -->
+	</div>
+	<div style="text-align: center; color: white;">
+		<br>
+		<img id="1" onclick="changeImage(1)" src="http://pngimg.com/upload/bulb_PNG1243.png" width="20%"/>
+		<img id="2" onclick="changeImage(2)" src="http://pngimg.com/upload/bulb_PNG1243.png" width="20%"/>
+		<img id="3" onclick="changeImage(3)" src="http://pngimg.com/upload/bulb_PNG1243.png" width="20%"/>
+		<img id="4" onclick="changeImage(4)" src="http://pngimg.com/upload/bulb_PNG1243.png" width="20%"/>
+		<br>
+		<div id="numbers">
+			<a id="5">0</a> &nbsp;
+			<a id="6">0</a> &nbsp;
+			<a id="7">0</a> &nbsp;
+			<a id="8">0</a> &nbsp;
+		</div>
+		
+		<br>	
+	<script>
+		//create a function that when you call it, it switches the image source
+		function changeImage(x){
+			//change the image
+			if(document.getElementById(x).src == "http://pngimg.com/upload/bulb_PNG1243.png"){
+				document.getElementById(x).src = "http://pngimg.com/upload/bulb_PNG1247.png";   //switch to on 
+				document.getElementById(x+4).innerHTML = 1;
+				
+			}
+			else{
+				document.getElementById(x).src = "http://pngimg.com/upload/bulb_PNG1243.png";   //switch to off
+				document.getElementById(x+4).innerHTML = 0;
+			}
+			
+		}
+		
+	</script>
+	</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE>
+<html>
+	 <head>
+		<style>
+		body{
+			background-image: url("https://media.giphy.com/media/JXHhI4o9NCf8k/giphy.gif");
+			background-repeat: no -repeat;
+			background-attachment: fixed;
+			background-position: center;
+			color: white;
+			background-size:cover;
+		}	
+		.one{
+			
+		}
+		img{
+			height: 100px;
+			width: auto;
+		}
+		</style>
+	</head>	
+	<body>
+		<div style="text-align: center;">
+			<!-- You do need to put these decriptors in your site -->
+			<h1 style="font-size:300%; color: #FFCC00">Go Fish !</h1>
+			<a style="font-size: 150%; color: #FFCC00">How Many Fish ?</a>
+			
+			<!-- My input tag that collects the number wanted -->
+			<input id="fishNum" onchange="fishy(this.value)" type="number">
+			<br>
+			
+			<!-- This states what the input valyes are worth -->
+			<div class="one">
+				<hr><br>
+				<img src="http://www.veryicon.com/icon/png/Cartoon/Fish%20Toys/Green%20Fish.png"/>
+				<a>I am worth 1</a>
+				<img src="http://www.clker.com/cliparts/9/a/8/U/T/v/light-blue-fish-hi.png"/>
+				<a>I am worth 5</a>
+				<img src="http://www.clker.com/cliparts/3/2/f/7/1195441338857301276Machovka_Happy_fish.svg.hi.png"/>
+				<a>I am worth 10</a>
+				<img src="http://3.bp.blogspot.com/-5uX9_tlY7U0/TrdDqAS6rlI/AAAAAAAAAYA/iUNLUoiiN20/s640/SEA001+%25285%2529.png"/>
+				<a>I am worth 100</a>
+				<hr>
+			</div>
+			<br>
+		
+		<div id="fish">	</div>       
+			
+	<script>
+		function fishy(x){
+			document.getElementById("fish").innerHTML = ""; 
+			//100
+			while(x>=100){
+				document.getElementById("fish").innerHTML += "<img src='http://3.bp.blogspot.com/-5uX9_tlY7U0/TrdDqAS6rlI/AAAAAAAAAYA/iUNLUoiiN20/s640/SEA001+%25285%2529.png'/>"; 
+				x=x-100;
+				if(x<100){
+					break;
+				}
+			}
+			//10
+			while(x>=10){
+				document.getElementById("fish").innerHTML += "<img src='http://www.clker.com/cliparts/3/2/f/7/1195441338857301276Machovka_Happy_fish.svg.hi.png'/>"; 
+				x=x-10;
+				if(x<10){
+					break;
+				}
+			}
+			//5
+			while(x>=5){
+				document.getElementById("fish").innerHTML += "<img src='http://www.clker.com/cliparts/9/a/8/U/T/v/light-blue-fish-hi.png'/>"; 
+				x=x-5;
+				if(x<5){
+					break;
+				}
+			}
+			//1
+			while(x>=1){
+				document.getElementById("fish").innerHTML += "<img src='http://www.veryicon.com/icon/png/Cartoon/Fish%20Toys/Green%20Fish.png'/>"; 
+				x=x-1;
+				if(x<1){
+					break;
+				}
+			}
+		}
+	</script>
+	</body>
+</html>
