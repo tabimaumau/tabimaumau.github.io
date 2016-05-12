@@ -1,0 +1,61 @@
+<!DOCTYPE>
+<html>
+  <head>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<style>
+	body{
+		background: linear-gradient(to right, cyan, grey); 
+	}	
+	input{
+		background-color: White;
+		border-radius: 100px;
+		font: 50px
+	}	
+		
+	</style>
+  </head>
+  <body>
+	<div class="container">
+    <h1 class="jumbotron">Primes between 0 and ... </h1>
+    <br>
+	
+	<input id="num" type="number" onchange = "printPrimes(this.value)"></input>
+	<p id="answer"></p>
+	You have <a id="amountOfPrimes"></a> prime numbers.
+	</div>
+
+    <script>
+	  //Discovers if a Number is Prime or Not
+	  function isItPrime(x){				//isItPrime(x) = false ro true
+			//Initalize it as true
+			var prime = true;
+		
+			for(var i=2; i<x; i++){
+				if(x%i==0){
+					prime=false
+					break;
+				}
+				
+			}
+			return prime;
+		}
+		
+		//Testing to see if it works 
+		function printPrimes(x){
+			var numOfPrimes = 0;
+			document.getElementById("answer").innerHTML = " ";
+			for(var i=2; i<x; i++){
+				//This prints X if X is a prime
+				if(isItPrime(i)==true){
+					document.getElementById("answer").innerHTML += i + ", ";
+					numOfPrimes++;
+					document.getElementById("amountOfPrimes").innerHTML = numOfPrimes;
+				}
+			}
+		}
+		
+  </script>
+  </body>
+</html>
